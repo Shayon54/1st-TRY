@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+        }
+        .container{
+            background-color: rgb(196, 169, 135);
+            text-align: left;
+            padding: 80px;
+            border-radius: 20px;
+            text-decoration: solid;
+        }
+        input{
+            padding: 8px;
+            width: 250px;
+        }
+        button{
+            padding: 8px;
+        }
+        button:hover{
+            background-color: rgb(204, 162, 111);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form</h1>
+        <label for="name">UserName</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <br>
+        <label for="regno">Registration number</label>
+        <input type="text" id="regno" placeholder="Enter your registration number">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <br>
+        <br>
+        <label for="pnumber">Phone number</label>
+        <input type="number" id="pnumber" placeholder="Enter your phonenumber">
+        <br>
+        <br>
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" placeholder="Enter your Date of Birth">
+        <br>
+        <br>
+        <button onclick="Submit()">Submit</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function Submit(){
+        let username=document.getElementById("name").value.trim();
+        let reg=document.getElementById("regno").value.trim();
+        let pass=document.getElementById("password").value;
+        let eml=document.getElementById("email").value.trim();
+        let phone=document.getElementById("pnumber").value.trim();
+        let result=document.getElementById("result");
+        let error=[];
+        let user=/^[A-Za-z0-9]+$/;
+        if(!user.test(username)){
+            error.push("Invalid username.Try again!")
+        }
+        let regnum=/^\d{2}[A-Z]{3}\d{4}$/;
+        if(!regnum.test(reg)){
+            error.push("Invalid registration number.Try again!")
+        }
+        let phonenum=/^\d{10}$/;
+        if(!phonenum.test(phone)){
+            error.push("Invalid phone number.Try again!")
+        }
+        let email=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if(!email.test(eml)){
+            error.push("Invalid email.Try again!")
+        }
+        let password=/^(?=.*\d)(?=.*[!@#$%^&*]).{8}$/;
+        if(!password.test(pass)){
+            error.push("Invalid password.Try again!")
+        }
+        if(error.length>0){
+            result.innerHTML=error.join("<br>");
+            result.style.color="red";
+        }else{
+            result.innerHTML="Submitted Successfully"
+            result.style.color="green";
+        }
+    }
+    </script>
+</body>
+</html>

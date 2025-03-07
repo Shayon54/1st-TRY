@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 40vh;
+        }
+        .container{
+            background-color: rgb(161, 236, 236);
+            padding: 20px;
+            border-radius: 10px;
+            height: 200px;
+        }
+        input{
+            width: 40vh;
+        }
+        select{
+            width: 30vh;
+        }
+        button:hover{
+            background-color: rgb(33, 105, 105);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <label for="curr">Currency</label><br>
+        <input type="number" id="curr" placeholder="Enter the currency"><strong>USD</strong><br><br>
+        <label for="country">Country</label>
+        <select  id="country">
+            <option value="rupees">Indian Rupees</option>
+            <option value="taka">Bangladesh taka</option>
+            <option value="euro">England</option>
+        </select>
+        <button onclick="Convert()">Convert</button>
+        <h3 id="result"></h3>
+        <script>
+            function Convert(){
+                let num=parseFloat(document.getElementById("curr").value);
+                let conv=document.getElementById("country").value;
+                let amount;
+                switch(conv){
+                    case "rupees":
+                    amount=num*87.28;
+                    document.getElementById("result").innerHTML=`Indian rupees=Rs ${amount}`;
+                    break;
+                    case "taka":
+                    amount=num*121.27;
+                    document.getElementById("result").innerHTML=`Bd taka= ${amount}`;
+                    break;
+                    case "euro":
+                    amount=num*0.95;
+                    document.getElementById("result").innerHTML=`Euro= ${amount} euros`;
+                    break;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 10px 15px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e9ecef;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.play-button {
+    color: #007bff;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+/* Intro Section */
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.feature-item img {
+    width: 80px;
+    margin: 0 auto 20px;
+}
+
+/* Clients Section */
+.clients {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project img {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.project-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-details a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.all-work {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.all-work:hover {
+    background-color: #218838;
+}
+
+/* Newsletter Section */
+.newsletter {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e9ecef;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    width: 70%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.newsletter-form button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Mobile Menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+}
